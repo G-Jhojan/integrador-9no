@@ -28,7 +28,7 @@ const PaymentScreen = ({ history }) => {
 			<Form onSubmit={submitHandler}>
 				<Form.Group className='payment-container'>
 					<Form.Label as='legend' className='payment-header'>
-						<h3 style={{ padding: '15px' }}>Select Payment Method</h3>
+						<h3 style={{ padding: '15px' }}>Seleccionar método de pago</h3>
 					</Form.Label>
 					<Col>
 						<Form.Check
@@ -52,7 +52,7 @@ const PaymentScreen = ({ history }) => {
 				</Form.Group>
 
 				<Button type='submit' variant='success' className='signin-btn' block>
-					Continue
+					Continuar
 				</Button>
 			</Form>
 		</FormContainer>

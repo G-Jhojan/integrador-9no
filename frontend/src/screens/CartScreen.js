@@ -36,7 +36,7 @@ const CartScreen = ({ match, location, history }) => {
 				<h1>MY Cart</h1>
 				{cartItems.length === 0 ? (
 					<Message>
-						Your cart is empty <Link to='/'>Go Back</Link>
+						Tu carrito esta vacío <Link to='/'>Regresar</Link>
 					</Message>
 				) : (
 					<ListGroup variant='flush'>
@@ -82,7 +82,7 @@ const CartScreen = ({ match, location, history }) => {
 				<Card>
 					<ListGroup variant='flush'>
 						<ListGroup.Item className='cart-header'>
-							<h3>Checkout Summary</h3>
+							<h3>Resumen de pago</h3>
 						</ListGroup.Item>
 						<ListGroup.Item>
 							<h5>Items: {cartItems.reduce((acc, item) => acc + item.qty, 0)}</h5>
@@ -98,7 +98,7 @@ const CartScreen = ({ match, location, history }) => {
 								disabled={cartItems.length === 0}
 								onClick={checkoutHandler}
 							>
-								Go to shipping page
+								Regresar
 							</Button>
 						</ListGroup.Item>
 					</ListGroup>

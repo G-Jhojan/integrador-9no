@@ -57,10 +57,10 @@ const ProfileScreen = ({ location, history }) => {
 	return (
 		<Row>
 			<Col md={3} className='profile-section'>
-				<h2>User Profile</h2>
+				<h2>Perfil de usuario </h2>
 				{message && <Message variant='danger'>{message}</Message>}
 				{}
-				{success && <Message variant='success'>Profile Updated</Message>}
+				{success && <Message variant='success'>Perfil actualizado</Message>}
 				{loading ? (
 					<Loader />
 				) : error ? (
@@ -68,20 +68,20 @@ const ProfileScreen = ({ location, history }) => {
 				) : (
 					<Form onSubmit={submitHandler}>
 						<Form.Group controlId='name'>
-							<Form.Label>Name</Form.Label>
+							<Form.Label>Nombre</Form.Label>
 							<Form.Control
 								type='name'
-								placeholder='Enter name'
+								placeholder='Ingrese su nombre'
 								value={name}
 								onChange={e => setName(e.target.value)}
 							></Form.Control>
 						</Form.Group>
 
 						<Form.Group controlId='email'>
-							<Form.Label>Email Address</Form.Label>
+							<Form.Label>Dirección de correo electronico</Form.Label>
 							<Form.Control
 								type='email'
-								placeholder='Enter email'
+								placeholder='Ingrese su email'
 								value={email}
 								onChange={e => setEmail(e.target.value)}
 							></Form.Control>
@@ -91,31 +91,31 @@ const ProfileScreen = ({ location, history }) => {
 							<Form.Label>Password</Form.Label>
 							<Form.Control
 								type='password'
-								placeholder='Enter password'
+								placeholder='Ingrese su contraseña'
 								value={password}
 								onChange={e => setPassword(e.target.value)}
 							></Form.Control>
 						</Form.Group>
 
 						<Form.Group controlId='confirmPassword'>
-							<Form.Label>Confirm Password</Form.Label>
+							<Form.Label>Confirmar contraseña</Form.Label>
 							<Form.Control
 								type='password'
-								placeholder='Confirm password'
+								placeholder='Confirme su contraseña'
 								value={confirmPassword}
 								onChange={e => setConfirmPassword(e.target.value)}
 							></Form.Control>
 						</Form.Group>
 
 						<Button type='submit' variant='success' className='signin-btn' block>
-							Update
+							Actualizar
 						</Button>
 					</Form>
 				)}
 				<br></br>
 			</Col>
 			<Col md={9} className='order-section'>
-				<h2>Orders History</h2>
+				<h2>Historial de pedidos</h2>
 				{loadingOrders ? (
 					<Loader />
 				) : errorOrders ? (
@@ -124,12 +124,12 @@ const ProfileScreen = ({ location, history }) => {
 					<Table className='table-sm profile-section'>
 						<thead>
 							<tr>
-								<th>Product ID</th>
-								<th>Order DATE</th>
-								<th>TOTAL Payment</th>
-								<th>Payment Date</th>
-								<th>DELIVERY status</th>
-								<th>Details</th>
+								<th>ID</th>
+								<th>Fecha de orden</th>
+								<th>Pago total</th>
+								<th>Fecha de pago</th>
+								<th>Estado de entrega</th>
+								<th>Detalles</th>
 							</tr>
 						</thead>
 						<tbody>
@@ -155,7 +155,7 @@ const ProfileScreen = ({ location, history }) => {
 									<td>
 										<LinkContainer to={`/order/${order._id}`}>
 											<Button variant='success' className='signin-btn'>
-												Details
+												Detalles
 											</Button>
 										</LinkContainer>
 									</td>
