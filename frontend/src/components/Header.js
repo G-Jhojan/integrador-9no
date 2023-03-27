@@ -42,30 +42,34 @@ const Header = () => {
 									<i className='fas fa-home'></i> Inicio
 								</Nav.Link>
 							</LinkContainer>
-							<LinkContainer to='/cart'>
-								<Nav.Link>
-									<i className='fas fa-shopping-cart'></i> Carrito
-								</Nav.Link>
-							</LinkContainer>
 							{userInfo ? (
-								<NavDropdown title={userInfo.name} id='username'>
-									<LinkContainer to='/profile'>
-										<NavDropdown.Item>Perfil</NavDropdown.Item>
+								<>
+									<LinkContainer to='/cart'>
+										<Nav.Link>
+											<i className='fas fa-shopping-cart'></i> Carrito
+										</Nav.Link>
 									</LinkContainer>
-									<NavDropdown.Item onClick={logoutHandler}>Logout</NavDropdown.Item>
-								</NavDropdown>
+									<NavDropdown title={userInfo.name} id='username'>
+										<LinkContainer to='/profile'>
+											<NavDropdown.Item>Perfil</NavDropdown.Item>
+										</LinkContainer>
+										<NavDropdown.Item onClick={logoutHandler}>Logout</NavDropdown.Item>
+									</NavDropdown>
+								</>
 							) : (
-								<LinkContainer to='/login'>
-									<Nav.Link>
-										<i className='fas fa-user'></i> Iniciar sesión
-									</Nav.Link>
-								</LinkContainer>
+								<>
+									<LinkContainer to='/login'>
+										<Nav.Link>
+											<i className='fas fa-user'></i> Iniciar sesión
+										</Nav.Link>
+									</LinkContainer>
+									<LinkContainer to='/register'>
+										<Nav.Link>
+											<i className='fas fa-users'></i> Registrarse
+										</Nav.Link>
+									</LinkContainer>
+								</>
 							)}
-							<LinkContainer to='/register'>
-								<Nav.Link>
-									<i className='fas fa-users'></i> Registrarse
-								</Nav.Link>
-							</LinkContainer>
 							<LinkContainer to='/contact'>
 								<Nav.Link>
 									<i className='fas fa-address-book'></i> Contacto

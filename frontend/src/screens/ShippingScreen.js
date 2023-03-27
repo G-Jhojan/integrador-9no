@@ -30,13 +30,13 @@ const ShippingScreen = ({ history }) => {
 			</Col>
 			<Col md={8}>
 				<FormContainer>
-					<h1>Shipping Address</h1>
+					<h1>Dirección de envío</h1>
 					<Form onSubmit={submitHandler}>
 						<Form.Group controlId='address'>
-							<Form.Label>Address</Form.Label>
+							<Form.Label>Dirección</Form.Label>
 							<Form.Control
 								type='text'
-								placeholder='Enter address'
+								placeholder='Ingrese su dirección'
 								value={address}
 								required
 								onChange={e => setAddress(e.target.value)}
@@ -44,10 +44,10 @@ const ShippingScreen = ({ history }) => {
 						</Form.Group>
 
 						<Form.Group controlId='city'>
-							<Form.Label>City</Form.Label>
+							<Form.Label>Ciudad</Form.Label>
 							<Form.Control
 								type='text'
-								placeholder='Enter city'
+								placeholder='Ingrese su ciudad'
 								value={city}
 								required
 								onChange={e => setCity(e.target.value)}
@@ -55,10 +55,10 @@ const ShippingScreen = ({ history }) => {
 						</Form.Group>
 
 						<Form.Group controlId='postalCode'>
-							<Form.Label>Postal Code</Form.Label>
+							<Form.Label>Código postal</Form.Label>
 							<Form.Control
 								type='text'
-								placeholder='Enter postal code'
+								placeholder='Ingrese su código postal'
 								value={postalCode}
 								required
 								onChange={e => setPostalCode(e.target.value)}
@@ -66,10 +66,10 @@ const ShippingScreen = ({ history }) => {
 						</Form.Group>
 
 						<Form.Group controlId='country'>
-							<Form.Label>Country</Form.Label>
+							<Form.Label>País</Form.Label>
 							<Form.Control
 								type='text'
-								placeholder='Enter country'
+								placeholder='Ingrese su país'
 								value={country}
 								required
 								onChange={e => setCountry(e.target.value)}
@@ -77,7 +77,7 @@ const ShippingScreen = ({ history }) => {
 						</Form.Group>
 
 						<Button type='submit' variant='success' className='signin-btn' block>
-							Continue
+							Continuar
 						</Button>
 					</Form>
 				</FormContainer>
